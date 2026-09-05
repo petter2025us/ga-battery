@@ -145,7 +145,7 @@ FPL_FLORIDA_TOU_PLACEHOLDER = UtilitySchedule(
 
 SCHEDULES = {
     "georgia_power": GEORGIA_POWER_OA,
-    "ouc_orlando": OUC_ORLANDO_TOU_PLACEHOLDER,
+    "ouc_orlando": OUC_ORLANDO_SHIFT_SAVE,
     "duke_florida": DUKE_FLORIDA_TOU_PLACEHOLDER,
     "fpl_florida": FPL_FLORIDA_TOU_PLACEHOLDER,
 }
