@@ -29,9 +29,9 @@ It happens 4-5 times per year in Ramona, El Cajon, Descanso.
 
 What if you had 48 hours of backup power?
 
-**Battery Backup: $60/mo. Peace of mind: Priceless.**
+**Battery Backup: $60/month. Peace of mind: Priceless.**
 
-Reserve your system today. 90-day installation window."
+Sign up for your lease today. Installation within 90 days."
 
 ### Image/Video
 
@@ -39,7 +39,7 @@ Battery in garage + house silhouette with power on (vs. dark house next door)
 
 ### CTA Button
 
-"LEARN MORE" or "RESERVE NOW"
+"LEARN MORE" or "SIGN UP"
 
 ### Link Destination
 
@@ -69,7 +69,7 @@ With our battery backup, you get:
 
 4-5 outages/year in your area. The math is simple.
 
-Reserve your system now. $300 deposit holds your spot for 90-day installation."
+Sign up for your lease today. No upfront cost. Installation within 90 days."
 
 ### Image/Video
 
@@ -77,7 +77,7 @@ Before/after: Dark neighborhood vs. house with lights on
 
 ### CTA Button
 
-"RESERVE YOUR SYSTEM"
+"SIGN UP FOR LEASE"
 
 ### Link Destination
 
@@ -101,9 +101,9 @@ We had a full working home.
 
 **Your turn.** Join 500+ families protecting their homes with 48-hour backup power.
 
-$60/month lease, installed in your garage, maintenance-free.
+$60/month lease, installed in your garage, maintenance-free. No upfront cost.
 
-Reserve your system today."
+Sign up today."
 
 ### Image/Video
 
@@ -159,11 +159,11 @@ From $500 spend over 5 days:
 - ~15-20 clicks per creative (45-60 total clicks)
 - ~5-8 form submissions (10-15% completion rate expected)
 - **CPL: $50-100 (acceptable range for high-intent residential)**
-- Of 8-15 leads, expect 1-2 to convert to deposits on phone call
+- Of 8-15 leads, expect to convert 3-5 on phone calls to lease agreements
 
 ### Success Threshold
 
-**15+ leads → Proceed to Week 2 (phone calls, deposit collection)**  
+**15+ leads → Proceed to Week 2 (phone calls, lease confirmations)**  
 **8-15 leads → Marginal; try $49/mo message or wait for full $1k spend**  
 **<8 leads → Pivot; test different ZIP or messaging**
 
@@ -182,20 +182,31 @@ From $500 spend over 5 days:
 
 Use this when calling within 24 hours:
 
-> "Hi [Name], thanks for showing interest in PSPS protection. I want to make sure you understand what we're offering:
+> "Hi [Name], thanks for your interest in PSPS protection. I want to walk you through our lease offer:
 >
 > - $60 per month for 25 years
 > - 13.5 kWh battery, installed in your garage (no hassle)
 > - Full backup power for 48 hours during PSPS or other outages
 > - All maintenance and insurance included
-> - **Commitment:** We install within 90-120 days
+> - **Zero upfront cost** — payments start after installation
+> - Installation within 90-120 days
 >
-> To hold your spot, we need a $300 deposit. Stripe or PayPal. Applied to your first payment if you proceed.
->
-> Are you ready to move forward?"
+> If you're interested, I'd like to set up a quick Zoom call to walk you through the lease and get it signed. We can do it today or tomorrow. Are you available?"
 
 **Outcomes:**
 
-- **Yes → Collect deposit (Stripe/PayPal, instant to bank)**
+- **Yes → Schedule Zoom meeting within 24 hours, send Zoom link + lease document**
 - **Maybe → 'I'll call you back in 3 days to check in'**
-- **No → 'What would change your mind? Would you be interested at $49/mo?'**
+- **No → 'What would change your mind? Would $49/mo work better?'**
+
+---
+
+## LEAD TRACKING SPREADSHEET
+
+| Name     | ZIP   | Phone        | Email     | Called? | Lease Signed? | Installation Date | Notes                              |
+| -------- | ----- | ------------ | --------- | ------- | ------------- | ----------------- | ---------------------------------- |
+| John D.  | 91942 | XXX-XXX-XXXX | john@...  | Y       | Y (verbal)    | TBD               | Ready to install                   |
+| Sarah M. | 92026 | XXX-XXX-XXXX | sarah@... | Y       | N             | —                 | Objection: wants to think about it |
+|          |       |              |           |         |               |                   |                                    |
+
+**Tracking:** Use Google Sheets or Airtable. Mark "Lease Signed?" as "Y (verbal)" for phone commits, "Y (formal)" if they sign written lease agreement.

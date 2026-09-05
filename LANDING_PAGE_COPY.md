@@ -64,19 +64,27 @@ _"Last PSPS lasted 3 days. Our battery gave us peace of mind." — James T., El 
 
 ## OFFER SECTION
 
-### "Reserve Your System Today"
+### "Simple. No Upfront Cost."
 
-**Price:** $60/month for 25 years (includes maintenance, insurance, support)
+**The Lease:**
 
-**Installation:** Within 90-120 days of signup
+- **$60/month for 25 years**
+- Includes: Battery, installation, maintenance, insurance, 24/7 support
+- **Zero upfront cost** — we handle everything
+- Sign on Zoom call, installation within 90-120 days
 
-**Commitment:** $300 refundable deposit to hold your spot
+**Why lease?**
+
+- Battery cost: $13,500 (we absorb depreciation risk)
+- Maintenance: $2,000+ over 25 years (included with lease)
+- No worries about equipment failure (we replace it)
+- Simple: sign once, pay monthly, never think about it again
 
 ---
 
 ## CTA BUTTON
 
-**[RESERVE YOUR SYSTEM]**
+**[SIGN UP FOR LEASE]**
 
 _(This opens a form collecting: Name, Email, Phone, Address)_
 
@@ -87,16 +95,16 @@ _(This opens a form collecting: Name, Email, Phone, Address)_
 1. First Name (required)
 2. Last Name (required)
 3. Email (required)
-4. Phone (required, for 24-hour follow-up call)
+4. Phone (required, for confirmation call)
 5. Street Address (required, ZIP must be 91942, 92026, 92084, 92021)
-6. Checkbox: "I understand 90-120 day installation window"
-7. Submit button: "RESERVE & WAIT FOR CALL"
+6. Checkbox: "I agree to the 25-year lease at $60/month starting at installation"
+7. Submit button: "SIGN UP FOR LEASE"
 
 ---
 
 ## POST-FORM MESSAGE
 
-"Thanks! We'll call you within 24 hours to confirm your reservation and answer questions. Your spot is held. Expect your system installation within 90-120 days."
+"Thanks for signing up! We'll call you within 24 hours to confirm your lease agreement and schedule your installation. Lease payments start after installation is complete."
 
 ---
 

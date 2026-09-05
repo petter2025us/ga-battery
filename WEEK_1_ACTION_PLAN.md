@@ -1,4 +1,4 @@
-# Week 1 Action Plan: Bootstrap Pre-Sales Launch
+# Week 1 Action Plan: Bootstrap Lease Pre-Sales Launch
 
 **Goal:** Launch landing page + ad test by end of Week 1  
 **Capital required:** $0-50 (domain optional) + $300-500 (ad test)  
@@ -18,26 +18,33 @@
   - Problem section (Dec 2024 PSPS event, costs)
   - Solution section (battery specs, 48-hour coverage)
   - Social proof section (use placeholder: "500+ families")
-  - Offer section ($60/mo, 90-day installation)
+  - Offer section ($60/mo lease, 90-day installation, zero upfront, sign on Zoom)
   - Form section (Carrd built-in form)
   - Footer
 - [ ] **Form fields:**
   - First Name, Last Name, Email, Phone (all required)
   - Street Address (required)
   - ZIP code restriction (91942, 92026, 92084, 92021 only)
-  - Checkbox: "I understand 90-120 day installation window"
+  - Checkbox: "I agree to the 25-year lease at $60/month starting at installation"
 - [ ] **Form submission:** Route to your email inbox OR export CSV later
 - [ ] Publish page (Carrd gives you a free subdomain like `yourdomain.carrd.co`)
 - [ ] **Optional:** Buy domain for $10-15 (your choice; free subdomain works fine for testing)
 
-### Task 2: Create Stripe/PayPal Deposit Account (30 min)
+### Task 2: Create Lease Agreement in Google Docs (30 min)
 
-- [ ] Open **Stripe.com** (free account, instant approval)
-  - Alternative: **PayPal.com** (also free)
-- [ ] Verify email, bank account (deposits clear in 1-2 days)
-- [ ] Create a simple checkout link for "$300 Deposit - PSPS Battery Reservation"
-- [ ] Get shareable checkout link (you'll send this to leads during phone calls)
-- [ ] **Tip:** Stripe checkout link takes 30 seconds; no code needed
+- [ ] Go to **docs.google.com**
+- [ ] Create a new document: "PSPS Battery Lease Agreement"
+- [ ] Add these sections:
+  - Header: "PSPS Battery Backup Lease Agreement"
+  - Customer info: Name, Email, Phone, Address (with blanks to fill)
+  - Terms: 25-year lease at $60/month
+  - Services: Battery, installation, maintenance, insurance, support included
+  - No upfront cost; payments start after installation
+  - Installation window: 90-120 days
+  - **Signature section:** "Signature: ___________ Date: ______"
+  - Make it 1-2 pages, professional but simple
+- [ ] Get the shareable link (you'll screen share + sign on Zoom)
+- [ ] **Test it:** Can you fill it in during a screen share?
 
 ### Task 3: Prepare Ad Creatives on Canva (1 hour)
 
@@ -48,7 +55,6 @@
   - **Creative C:** Group of smiling families (social proof angle)
 - [ ] Dimensions: **1200x628px** (Facebook/Instagram recommended)
 - [ ] Download as PNG (free Canva can do this)
-- [ ] **Alternative:** Use Canva mobile app, take screenshots, crop to 1:1 ratio for Instagram Stories
 
 ### Task 4: Prep Ad Copy Document (30 min)
 
@@ -56,7 +62,7 @@
 - [ ] Have it open in a Google Doc or Notion so you can paste directly into Facebook Ads Manager
 - [ ] Highlight the three variations clearly
 
-**End of Day 1:** Landing page live, Stripe account ready, ad copy prepared
+**End of Day 1:** Landing page live, lease template ready, ad copy prepared
 
 ---
 
@@ -79,12 +85,9 @@
   - Locations: ZIP codes 91942, 92026, 92084, 92021
   - Age: 35-65
   - Interests: "Power outage", "Emergency preparedness", "Home security", "Solar panels"
-  - Income: Not available via Facebook, but age + interests proxy well
-- [ ] **Placements:**
-  - Facebook Feed + Instagram Feed + Instagram Stories
-  - Automatic placements is fine for first test
+- [ ] **Placements:** Facebook Feed + Instagram Feed + Instagram Stories
 - [ ] **Daily budget:** $100/day × 5 days = $500 total
-- [ ] **Bid strategy:** "Lowest cost" (let Facebook optimize)
+- [ ] **Bid strategy:** "Lowest cost"
 - [ ] **Audience size:** Should be 50k-200k (will show in interface)
 
 ### Task 7: Upload Creatives & Ad Copy (1.5 hours)
@@ -99,7 +102,7 @@
   - Upload Creative B image
   - Copy headline: "Stop Losing $1,000+ Per Outage"
   - Paste primary text from Creative B section
-  - CTA: "Reserve Now"
+  - CTA: "Sign Up"
   - Landing page: Your Carrd URL
 - [ ] Create **Ad 3 (Social Proof):**
   - Upload Creative C image
@@ -115,169 +118,223 @@
 - [ ] Ads go live immediately (may take 1-4 hours for review)
 - [ ] **Screenshot your campaign setup** for reference
 
-**End of Day 2:** Ads running, targeting locked in, initial impressions starting
+**End of Day 2:** Ads running, targeting locked in
 
 ---
 
 ## DAY 3
 
-### Task 9: Calls + Lead Follow-Up (Daily, ongoing)
+### Task 9: Calls + Zoom Scheduling (Daily, ongoing)
 
 - [ ] Check Carrd form inbox every 2-3 hours
 - [ ] For each lead, **call within 24 hours** (use phone script from [AD_COPY_VARIATIONS.md](AD_COPY_VARIATIONS.md))
-- [ ] **Call script:**
+- [ ] **Call objective:** Schedule Zoom meeting
   - Confirm location (must be 91942, 92026, 92084, 92021)
-  - Walk through offer: $60/mo, 25-year lease, 90-120 day installation
-  - Closing line: "To hold your spot, I need a $300 deposit via Stripe or PayPal. Ready?"
+  - Walk through offer: $60/mo, 25-year lease, zero upfront, 90-120 day installation
+  - Ask: "When are you available for a quick Zoom call to review the lease? Today or tomorrow?"
+- [ ] **For "Yes" leads:**
+  - Schedule Zoom meeting (use Google Calendar invite or just grab a time)
+  - Send Zoom link + lease document Google Doc link
+  - Log as "Zoom scheduled"
 - [ ] **Track outcomes:**
   - Lead name, ZIP, phone, email
-  - Called Y/N, deposit Y/N, objection (if no)
+  - Called Y/N, Zoom scheduled Y/N, objection (if no)
   - Keep spreadsheet or Notion doc
 
-### Task 10: Ad Performance Check (Day 3 evening)
+### Task 10: First Zoom Closes (Late afternoon/evening)
+
+- [ ] Conduct Zoom meetings (schedule them close together if possible)
+- [ ] **During Zoom:**
+  - Share Google Doc lease agreement on screen
+  - Walk through each section ($60/mo, 25 years, zero upfront, installation 90-120 days)
+  - Ask: "Any questions?" Answer objections
+  - Closing: "If you're ready to move forward, I'll need you to type your name and date on the signature line. I'll do the same."
+  - Get them to sign (they type in Google Doc)
+- [ ] **After signing:**
+  - Download PDF copy of signed lease
+  - Send them a confirmation email: "Your lease has been signed. Installation within 90-120 days. We'll confirm your installation slot in the next 2 weeks."
+  - Log as "Lease signed"
+
+### Task 11: Ad Performance Check (Day 3 evening)
 
 - [ ] Log into Facebook Ads Manager
 - [ ] Check metrics for each ad:
-  - Impressions
-  - Clicks
-  - CPL (cost per lead)
-  - CTR (click-through rate)
-  - Form completions
+  - Impressions, Clicks, CPL, CTR, Form completions
 - [ ] **Pause underperformer** (lowest CTR or highest CPL)
 - [ ] **Double budget** for top 2 performers for Days 4-5
 
-**End of Day 3:** 3-5 leads expected, 0-1 deposits collected, ad performance evaluated
+**End of Day 3:** 3-5 leads expected, 0-1 Zoom calls booked, 1-2 leases signed
 
 ---
 
 ## DAY 4-5
 
-### Task 11: Continuous Lead Follow-Up (Daily)
+### Task 12: Continuous Zoom Closes (Daily)
 
-- [ ] Check inbox 3-4x per day
-- [ ] Call all new leads within 24 hours
-- [ ] Collect deposits (Stripe/PayPal checkout links)
-- [ ] Document all calls + outcomes
+- [ ] Check inbox 3-4x per day for new leads
+- [ ] Call new leads within 24 hours
+- [ ] Conduct Zoom calls with scheduled leads
+- [ ] Get signatures on lease documents
+- [ ] Track all outcomes in spreadsheet
 
-### Task 12: Optimize Ads (Day 4 evening)
+### Task 13: Optimize Ads (Day 4 evening)
 
 - [ ] Pause lowest performer (if not already paused)
 - [ ] Increase daily budget for top performer to $200-250/day
 - [ ] Monitor CPL trend (should stay <$35; if >$50, pause)
 
-**End of Day 5:** 10-15 leads expected, 1-2 deposits collected
+**End of Day 5:** 10-15 leads expected, 3-5 Zoom calls booked, 2-4 leases signed
 
 ---
 
 ## DAY 6-7
 
-### Task 13: Final Lead Collection
+### Task 14: Final Lead Collection & Zoom Closes
 
 - [ ] Continue calling all remaining leads
-- [ ] Collect deposits from warm prospects
+- [ ] Schedule Zoom calls with warm prospects
+- [ ] Conduct remaining Zoom meetings
+- [ ] Get final signatures
 - [ ] Note objections for next ad iteration
 
-### Task 14: Measure + Decide (Day 7 evening)
+### Task 15: Measure + Decide (Day 7 evening)
 
 **Run final numbers:**
 
-| Metric             | Target     | Actual | Status |
-| ------------------ | ---------- | ------ | ------ |
-| Total leads        | 15-25      | ___    | ✓/✗    |
-| CPL                | <$30       | ___    | ✓/✗    |
-| Deposits collected | 3-5        | ___    | ✓/✗    |
-| Total deposit $$   | $900-1,500 | ___    | ✓/✗    |
+| Metric        | Target | Actual | Status |
+| ------------- | ------ | ------ | ------ |
+| Total leads   | 15-25  | ___    | ✓/✗    |
+| CPL           | <$30   | ___    | ✓/✗    |
+| Leases signed | 3-5    | ___    | ✓/✗    |
 
 ### Decision Point (End of Day 7)
 
-**GO (Move to Week 2: Phone calls + deposit collection):**
+**GO (Move to Week 2: Scale ads + installer partnerships):**
 
 - ✓ 15+ leads collected
 - ✓ CPL <$35
-- ✓ 2+ deposits collected
+- ✓ 2+ leases signed
 
 **MARGINAL (Test different angle):**
 
 - 8-15 leads
 - CPL $35-50
-- 0-1 deposits
+- 0-1 leases signed
 
 **NO-GO (Pause, iterate):**
 
 - <8 leads
 - CPL >$50
-- 0 deposits
+- 0 leases signed
 
-**If MARGINAL:** Re-run ads with new messaging ($49/mo instead of $60/mo) or test different ZIP  
-**If NO-GO:** Pause ads, analyze objections from calls, try organic Nextdoor approach instead
+**If MARGINAL:** Re-run ads with $49/mo messaging or test different ZIP  
+**If NO-GO:** Pause ads, analyze objections, try organic Nextdoor approach
 
 ---
 
 ## DAILY CHECKLIST
 
 ```
-☐ Check Carrd inbox (morning)
+☐ Check Carrd inbox (morning + 3x per day)
 ☐ Call new leads within 24 hours
-☐ Document call outcomes (spreadsheet)
-☐ Send Stripe/PayPal links to ready leads
+☐ Schedule Zoom calls (target same-day or next-day)
+☐ Conduct Zoom calls (walk through lease, get signature)
+☐ Download + email signed leases
+☐ Document outcomes in spreadsheet
 ☐ Check ad performance (evening)
 ☐ Adjust ad spend if needed
-☐ Follow up on warm "maybes" (3-day callback)
+```
+
+---
+
+## ZOOM CALL TEMPLATE
+
+**Before Zoom:**
+
+1. Send Google Calendar invite with Zoom link
+2. Email Google Docs lease agreement link + brief intro:
+
+```
+Hi [Name],
+
+Looking forward to our call tomorrow at [TIME].
+
+Here's the Google Docs link for our lease agreement:
+[LINK TO GOOGLE DOC]
+
+We'll go through it together on the call and you can sign it right there.
+
+See you soon!
+[Your name]
+```
+
+**During Zoom (15-20 min):**
+
+1. Confirm address, ZIP, phone, email
+2. Walk through lease terms:
+   - $60/month, 25 years
+   - Includes: Battery, installation, maintenance, insurance
+   - Zero upfront cost; payments start after installation
+   - 90-120 day installation window
+3. Answer questions
+4. "Ready to sign?" → Have them type their name + date in Google Doc
+5. You sign as lessor (type your name, date, company name)
+6. Download PDF, email to them
+
+**After Zoom:**
+
+```
+Hi [Name],
+
+Thanks for signing! Your PSPS battery lease agreement is confirmed.
+
+Next steps:
+- We'll install your 13.5 kWh battery within 90-120 days
+- You'll get a confirmation call 2 weeks before installation
+- Lease payments ($60/mo) start the day after installation
+- We handle all maintenance, insurance, and support
+
+Any questions, reach out anytime!
+
+[Your name]
+[Your phone]
+[Company name]
+
+Attached: Signed lease agreement
 ```
 
 ---
 
 ## WEEK 2 PREVIEW (If Goes Forward)
 
-**If you have 15+ leads + $900+ in deposits:**
+**If you have 15+ leads + 2+ signed leases:**
 
 1. Scale ad spend to $2-3k/week
-2. Partner with local electrician (5-10 installer leads sent per week)
-3. Begin Phase 3: Installation + revenue cycles
+2. Begin installer recruitment (pitch them your signed lease list)
+3. Keep running Zoom calls, signing more leases
 
-**Capital flow:**
+**Lead to lease funnel:**
 
-- Week 1: 0 → $1,500 deposits
-- Week 2: $1,500 → Install first 2-3 batteries from deposits
-- Week 3: Revenue from batteries installed; use new deposits to fund next batch
-
----
-
-## CONTACT TEMPLATE (For Leads)
-
-Save this as a text/email template for quick send:
-
-```
-Hi [Name],
-
-Thanks for your interest in PSPS protection. I'm calling you tomorrow between [TIME] and [TIME] at [YOUR PHONE]. If you prefer, you can reply with a good time to call.
-
-Quick summary of what we discussed:
-- $60/month for 25 years
-- 13.5 kWh battery backup, installed in your garage
-- Full power for 48+ hours during PSPS or outages
-- 90-120 day installation window
-- $300 deposit holds your spot
-
-Looking forward to connecting!
-
-[Your name]
-[Your phone]
-[Company name / "PSPS Battery Backup"]
-```
+- Week 1: 15+ form submissions
+- Week 1-2: 70% call conversion → 10-15 leads reached
+- Week 1-2: 50% Zoom conversion → 5-8 leases signed
+- Week 2-3: 50+ leads, 15-20 leases signed
+- Week 3-4: Pitch installers with 20+ signed leases ("I have ready-to-install customers for you")
 
 ---
 
 ## TOOLS YOU'LL NEED
 
-| Tool          | Cost                                | Use                       |
-| ------------- | ----------------------------------- | ------------------------- |
-| Carrd         | Free (or $19/yr domain)             | Landing page              |
-| Canva         | Free                                | Ad creative images        |
-| Facebook Ads  | $300-500                            | Ad spend                  |
-| Stripe        | Free (2.9% + $0.30 per transaction) | Deposit processing        |
-| Google Sheets | Free                                | Lead tracking spreadsheet |
-| Phone         | Free/existing                       | Calls                     |
+| Tool            | Cost                              | Use             |
+| --------------- | --------------------------------- | --------------- |
+| Carrd           | Free (or $19/yr domain)           | Landing page    |
+| Canva           | Free                              | Ad creatives    |
+| Facebook Ads    | $300-500                          | Ad spend        |
+| Google Docs     | Free                              | Lease agreement |
+| Google Calendar | Free                              | Zoom scheduling |
+| Zoom            | Free (40 min per call, unlimited) | Close calls     |
+| Google Sheets   | Free                              | Lead tracking   |
+| Phone           | Free/existing                     | Calls           |
 
 **Total out-of-pocket Week 1:** $300-500
 
@@ -287,16 +344,55 @@ Looking forward to connecting!
 
 By end of Week 1:
 
-- ✓ Landing page live, tested, form working
-- ✓ Ad accounts set up, 3 creatives running
-- ✓ Deposits processing via Stripe
-- ✓ Lead tracking spreadsheet started
-- ✓ 8-15 qualified leads collected
-- ✓ 1-2 deposits in hand
+- ✓ Landing page live
+- ✓ Ads running
+- ✓ 8-15 qualified leads
+- ✓ 2-4 leases signed
+- ✓ Lead tracking started
 
 By end of Week 2:
 
-- ✓ 50+ leads, $5k+ in deposits
-- ✓ 10-15 warm "ready to install" prospects
-- ✓ Installer partnerships beginning
-- ✓ Phase 3 readiness confirmed
+- ✓ 50+ leads
+- ✓ 15-20 leases signed
+- ✓ Installer recruitment begins
+- ✓ Phase 3 readiness (installation + revenue cycles)
+
+---
+
+## CRITICAL: Post-Signing Customer Retention (Signed → Installed → Payment)
+
+**Timeline:** Signed lease → 90-120 days → Installation → Few weeks → First payment
+
+**Risk:** Customer signs, then cancels before installation or payment. You have signed lease but zero revenue.
+
+**Solution: Strong customer care during the gap (signing to first payment)**
+
+### Touchpoint Schedule
+
+| When                       | Action                                | Why                                 |
+| -------------------------- | ------------------------------------- | ----------------------------------- |
+| **Day 1 (after Zoom)**     | Send signed lease PDF + welcome email | Confirm agreement                   |
+| **Week 2**                 | First check-in call                   | "Installation on track, questions?" |
+| **Week 4-8**               | Monthly check-ins                     | Keep warm, address concerns         |
+| **2 weeks before install** | Installation confirmation call        | Nail down date/time/access          |
+| **Day before install**     | Installer texts/calls                 | "We're coming 8am-2pm tomorrow"     |
+| **Installation day**       | You available by phone                | Support if issues arise             |
+| **Day after install**      | Send walkthrough guide + photo        | Proof it works                      |
+| **Week 2-3 after install** | Functionality check                   | "System good? Ready for payments?"  |
+| **Week 3-4 after install** | First payment charged                 | Auto-recurring                      |
+
+### Red Flags & Responses
+
+| Issue                    | Response                                                     |
+| ------------------------ | ------------------------------------------------------------ |
+| "I changed my mind"      | "Would a 2-week free trial help you see it in action?"       |
+| "Will this save money?"  | "No, it's backup insurance. TOU savings are minimal."        |
+| "Permit delays"          | "Installation pushed to [DATE]. Lease still active."         |
+| "System not working"     | "I'll fix it today. It's our equipment, our responsibility." |
+| "Nervous about 25 years" | "You're covered. Equipment failures are on us."              |
+
+### Goal
+
+**90%+ of signed leases → Installation → First payment**
+
+This is the critical metric. A signed lease that never reaches payment isn't revenue—it's a contract dispute waiting to happen. Strong execution during this gap determines if your leases are real.
