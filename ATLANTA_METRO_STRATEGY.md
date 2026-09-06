@@ -104,3 +104,7 @@ Built after a proposed version claiming "$145/mo average savings" was rejected �
 Form matches the requested OTP-close flow: name, phone, average monthly bill (range select), ZIP (defaulted to 30004), consent checkbox. Same `leads` collection pattern as the Florida pages, `track: "milton-gapower-30004"`.
 
 **Still open before this should get real ad spend or AI-video traffic:** the PV-pairing and TPO-eligibility questions in §1. The page doesn't promise a dollar figure, so it's safe to run for lead capture now, but the phone close script should not quote a specific incentive amount until those are confirmed.
+
+### Update: video section added (2026-09-06)
+
+The "Why Milton, why now" text section on the live page was replaced with a video player slot per direct request (Justin's AI-video plan). Claude can't generate the video itself — no video-generation tool available — so the section instead hosts a "video coming soon" placeholder wired to accept a real embed URL (YouTube/Vimeo) or direct file link via one config line in the page's script. Drop the link in once the video exists; no other page changes needed.
