@@ -108,3 +108,15 @@ Form matches the requested OTP-close flow: name, phone, average monthly bill (ra
 ### Update: video section added (2026-09-06)
 
 The "Why Milton, why now" text section on the live page was replaced with a video player slot per direct request (Justin's AI-video plan). Claude can't generate the video itself — no video-generation tool available — so the section instead hosts a "video coming soon" placeholder wired to accept a real embed URL (YouTube/Vimeo) or direct file link via one config line in the page's script. Drop the link in once the video exists; no other page changes needed.
+
+### Update: incentive eligibility research (2026-09-06)
+
+Could not place a phone call (no calling capability available) or access the actual tariff/rider text — Georgia PSC's docket search (correct docket: **#56002**, 2025 IRP) is a JS-rendered application whose document list doesn't expose itself to automated fetching. Web research instead:
+
+**PV-pairing requirement — upgraded from "unconfirmed" to "likely required," still not a legal confirmation.** Every independent source describing this program — [Georgia Power's own site](https://www.georgiapower.com/news-hub/innovation/the-essential-role-of-battery-energy-storage-systems.html), [SEPA](https://sepapower.org/knowledge/vpp-der-policy-q3-2025/), [pv-magazine USA](https://pv-magazine-usa.com/2025/07/24/georgia-power-agrees-to-give-community-solar-a-path-forward/), [Southern Alliance for Clean Energy's policy analysis](https://cleanenergy.org/news/the-good-the-bad-and-the-uncertain-in-georgia-powers-proposed-irp-settlement/), and a solar installer's own explainer ([Better Tomorrow Solar](https://www.bettertomorrowsolar.com/blog/georgia-power-vpp-pilot-program-partnership-explained/)) — describes the program identically: "pairing dispatchable battery energy storage systems with behind-the-meter solar systems." None mentions a storage-only path. Consistent enough across independent sources to treat as a real signal, not proof.
+
+**TPO/lease eligibility — still genuinely unconfirmed, no signal found either way.** No source addresses whether a third-party-owned or leased system qualifies for the utility-directed incentive. Notably, Better Tomorrow Solar's own explainer states the pilot is still pre-enrollment: *"The VPP Pilot Program is still in its early stages of development and regulatory approval, so direct consumer participation is not yet available."* This may mean the operational eligibility rules (including TPO treatment) simply haven't been published yet.
+
+**Also found:** the stipulation reportedly targets a minimum of 10,000 solar+battery customers program-wide, and a since-modified size cap that critics said was originally too small to run home heating/AC during an outage (Georgia Power agreed to revisit the interconnection study fee alongside a larger aggregate size limit, per pv-magazine).
+
+**Still the recommended next step, unchanged:** a direct call to Georgia Power's DER/interconnection group, or a follow-up read of docket #56002 once its documents are indexed, before quoting any incentive figure to a customer.
