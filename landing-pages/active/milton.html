@@ -1,0 +1,611 @@
+<title>Milton Power Backup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  :root {
+    --bg: #0b1a24;
+    --surface: #122636;
+    --surface-2: #1a3549;
+    --line: rgba(214, 231, 236, 0.14);
+    --ink: #dfeaee;
+    --ink-soft: #9db2bd;
+    --ink-faint: #6f8894;
+    --accent: #f0a63e;
+    --accent-ink: #2a1a00;
+    --accent-soft: rgba(240, 166, 62, 0.14);
+    --ok: #6fbf9a;
+    --font-display: "Fraunces", ui-serif, Georgia, serif;
+    --font-body: "Source Serif 4", Georgia, ui-serif, serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #eef1ee;
+      --surface: #e2e7e2;
+      --surface-2: #d5dcd4;
+      --line: rgba(14, 30, 26, 0.14);
+      --ink: #122019;
+      --ink-soft: #3d5148;
+      --ink-faint: #5f7369;
+      --accent: #b9701f;
+      --accent-ink: #fff6ea;
+      --accent-soft: rgba(185, 112, 31, 0.12);
+      --ok: #3f7c5d;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #eef1ee;
+    --surface: #e2e7e2;
+    --surface-2: #d5dcd4;
+    --line: rgba(14, 30, 26, 0.14);
+    --ink: #122019;
+    --ink-soft: #3d5148;
+    --ink-faint: #5f7369;
+    --accent: #b9701f;
+    --accent-ink: #fff6ea;
+    --accent-soft: rgba(185, 112, 31, 0.12);
+    --ok: #3f7c5d;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b1a24;
+    --surface: #122636;
+    --surface-2: #1a3549;
+    --line: rgba(214, 231, 236, 0.14);
+    --ink: #dfeaee;
+    --ink-soft: #9db2bd;
+    --ink-faint: #6f8894;
+    --accent: #f0a63e;
+    --accent-ink: #2a1a00;
+    --accent-soft: rgba(240, 166, 62, 0.14);
+    --ok: #6fbf9a;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.55;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    margin: 0;
+    color: var(--ink);
+  }
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .topline {
+    text-align: center;
+    padding: 10px 16px;
+    background: var(--surface-2);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .topline b {
+    color: var(--accent);
+  }
+
+  .hero {
+    padding: 52px 0 40px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 11px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(2rem, 4.2vw, 2.7rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    max-width: 15ch;
+  }
+  .hero .sub {
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    max-width: 46ch;
+    margin-top: 16px;
+  }
+  .price-tag {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 26px;
+  }
+  .price-tag .amt {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+  .price-tag .per {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+  .reassure {
+    list-style: none;
+    margin: 22px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+  .reassure li {
+    display: flex;
+    gap: 9px;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  .reassure li::before {
+    content: "✓";
+    color: var(--ok);
+    font-weight: 700;
+    flex: none;
+  }
+
+  .form-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 26px 26px 24px;
+    position: sticky;
+    top: 20px;
+  }
+  .form-card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .form-card .form-sub {
+    color: var(--ink-faint);
+    font-size: 13.5px;
+    margin: 0 0 18px;
+  }
+  form {
+    display: grid;
+    gap: 12px;
+  }
+  label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--ink);
+    padding: 12px 13px;
+    font-family: var(--font-body);
+    font-size: 16px;
+  }
+  select {
+    appearance: none;
+    background-image:
+      linear-gradient(45deg, transparent 50%, var(--ink-faint) 50%),
+      linear-gradient(135deg, var(--ink-faint) 50%, transparent 50%);
+    background-position:
+      calc(100% - 18px) center,
+      calc(100% - 13px) center;
+    background-size:
+      5px 5px,
+      5px 5px;
+    background-repeat: no-repeat;
+  }
+  input:focus,
+  select:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+  .zip-flag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    margin-top: -4px;
+    min-height: 14px;
+  }
+  .consent {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+  .consent input {
+    margin-top: 3px;
+    flex: none;
+  }
+  button {
+    margin-top: 4px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    border-radius: 6px;
+    padding: 16px 22px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 14.5px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    filter: brightness(1.06);
+  }
+  button:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+  }
+  button:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .status {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    margin-top: 8px;
+    min-height: 16px;
+  }
+  .status.ok {
+    color: var(--ok);
+  }
+  .status.err {
+    color: #e2685a;
+  }
+
+  .trust {
+    padding: 34px 0;
+    border-top: 1px solid var(--line);
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .trust-item .n {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .trust-item .l {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+
+  .why {
+    padding: 8px 0 44px;
+    border-top: 1px solid var(--line);
+  }
+  .why h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    max-width: 28ch;
+  }
+  .video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-frame video,
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink-faint);
+    text-align: center;
+    padding: 0 24px;
+  }
+  .video-placeholder .play {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-placeholder .play svg {
+    margin-left: 3px;
+  }
+  .video-placeholder .label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .video-placeholder p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 36ch;
+  }
+
+  footer {
+    padding: 24px 0 40px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 820px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .form-card {
+      position: static;
+    }
+    .trust-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+  }
+</style>
+
+<div class="topline">
+  <b>30004 · Milton, GA</b> — backup power lease, $0 out of pocket
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge">⚡ Storm season backup</span>
+      <h1>Keep the lights on when Georgia Power can't.</h1>
+      <p class="sub">
+        A whole-home battery, leased with $0 out of pocket. Not a bill-savings
+        plan — this is backup power for the next ice storm or tornado line that
+        knocks out Fulton County.
+      </p>
+      <div class="price-tag">
+        <span class="amt">$0</span
+        ><span class="per">due at signing · 25-year lease</span>
+      </div>
+      <ul class="reassure">
+        <li>Nothing to pay today — signed on a short video call</li>
+        <li>Payments start only after your system is installed and working</li>
+        <li>
+          May qualify for a new Georgia Power storage incentive program
+          (confirmed on your call, not guaranteed here)
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <h2>Get a call, not a sales pitch</h2>
+      <p class="form-sub">
+        15 minutes. We confirm you qualify and answer your questions.
+      </p>
+      <form id="lead-form">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" required autocomplete="name" />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phone"
+            required
+            autocomplete="tel"
+            placeholder="(404) 555-0110"
+          />
+        </div>
+        <div>
+          <label for="bill">Average monthly power bill</label>
+          <select id="bill" required>
+            <option value="">Select a range</option>
+            <option>$100 – $150</option>
+            <option>$150 – $250</option>
+            <option>$250 – $400</option>
+            <option>$400+</option>
+          </select>
+        </div>
+        <div>
+          <label for="zip">ZIP code</label>
+          <input
+            type="text"
+            id="zip"
+            required
+            maxlength="5"
+            inputmode="numeric"
+            value="30004"
+          />
+          <div class="zip-flag" id="zip-flag"></div>
+        </div>
+        <label class="consent"
+          ><input type="checkbox" id="consent" required /> I agree to be
+          contacted by phone or text about this offer.</label
+        >
+        <button type="submit" id="submit-btn">Get my call</button>
+        <div class="status" id="form-status"></div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item">
+      <div class="n">13.5 kWh</div>
+      <div class="l">Whole-home battery</div>
+    </div>
+    <div class="trust-item">
+      <div class="n">48 hrs+</div>
+      <div class="l">Estimated backup time</div>
+    </div>
+    <div class="trust-item">
+      <div class="n">$0</div>
+      <div class="l">Cost today</div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>See how it works</h2>
+    <div class="video-frame" id="video-frame">
+      <div class="video-placeholder" id="video-placeholder">
+        <div class="play">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M8 5v14l11-7-11-7z" fill="var(--accent)" />
+          </svg>
+        </div>
+        <span class="label">Video coming soon</span>
+        <p>
+          A short walkthrough of the lease, the incentive program, and what
+          installation looks like.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Backup Power Program · Milton, GA — not affiliated with Georgia Power Company.
+  Your info is used only to schedule your call.
+</footer>
+
+<script>
+  // Drop the real video in here once it exists. Either:
+  //   1) a hosted URL (YouTube/Vimeo embed URL, or a direct .mp4 link), or
+  //   2) leave null to keep showing the "video coming soon" placeholder.
+  const VIDEO_URL = null; // e.g. "https://www.youtube.com/embed/XXXXXXXXXXX" or "https://.../clip.mp4"
+
+  (function () {
+    if (!VIDEO_URL) return;
+    const frame = document.getElementById("video-frame");
+    const isDirectFile = /\.(mp4|webm|ogg)$/i.test(VIDEO_URL);
+    if (isDirectFile) {
+      frame.innerHTML =
+        '<video controls playsinline preload="metadata" src="' +
+        VIDEO_URL +
+        '"></video>';
+    } else {
+      frame.innerHTML =
+        '<iframe src="' +
+        VIDEO_URL +
+        '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    }
+  })();
+
+  (async function () {
+    const db = await claude.use("db").catch(() => null);
+    const form = document.getElementById("lead-form");
+    const status = document.getElementById("form-status");
+    const btn = document.getElementById("submit-btn");
+    const zip = document.getElementById("zip");
+    const zipFlag = document.getElementById("zip-flag");
+    const VALID_ZIP = "30004";
+
+    function checkZip() {
+      const v = zip.value.trim();
+      if (v === VALID_ZIP) {
+        zipFlag.textContent = "✓ in service area";
+        zipFlag.style.color = "var(--ok)";
+      } else if (v.length === 5) {
+        zipFlag.textContent =
+          "Outside current area — we'll still note your info.";
+        zipFlag.style.color = "var(--ink-faint)";
+      } else {
+        zipFlag.textContent = "";
+      }
+    }
+    zip.addEventListener("input", checkZip);
+    checkZip();
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+      const payload = {
+        name: document.getElementById("name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        bill: document.getElementById("bill").value,
+        zip: zip.value.trim(),
+        track: "milton-gapower-30004",
+        inZip: zip.value.trim() === VALID_ZIP,
+        consent: document.getElementById("consent").checked,
+        submittedAt: new Date().toISOString(),
+      };
+      status.textContent = "Submitting…";
+      status.className = "status";
+      try {
+        if (db) {
+          const id = crypto.randomUUID
+            ? crypto.randomUUID()
+            : String(Date.now()) + Math.random().toString(16).slice(2);
+          await db.collection("leads").doc(id).set(payload);
+        }
+        status.textContent = "Thanks — we'll call within 24 hours.";
+        status.className = "status ok";
+        form.reset();
+        zip.value = VALID_ZIP;
+        checkZip();
+      } catch (err) {
+        status.textContent = "Something went wrong — please try again.";
+        status.className = "status err";
+      }
+      btn.disabled = false;
+    });
+  })();
+</script>

@@ -1,8 +1,12 @@
 # Georgia residential battery — economics before spend
 
+> **Current status:** active market is Georgia/Atlanta metro. See [ATLANTA_METRO_STRATEGY.md](ATLANTA_METRO_STRATEGY.md) for the live thesis, ZIP targeting, and the Georgia Power incentive that changes the math below — and [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md) for the live landing page, data schema, and the claim-discipline rules that govern all marketing/sales copy. Florida research is deprioritized, not deleted (see [FLORIDA_ZIP_INTELLIGENCE.md](FLORIDA_ZIP_INTELLIGENCE.md)).
+
 A deterministic model of whether a Georgia Power residential battery lease can
 be sold on bill savings. Built before any ad spend, because it answers the
 question ad spend was going to answer expensively.
+
+**This finding still holds for bill-savings claims specifically** — the pivot to Georgia is driven by a _backup-power_ pitch plus a newly-found utility incentive, not a reversal of the arbitrage math below.
 
 ```bash
 python -m engine.breakeven   # break-even lease payment by bill size and load shape
@@ -69,7 +73,7 @@ Assumed, and each is a named parameter in `engine/tariff.py`:
 | Dispatch                | perfect | Charges every night, discharges peak-first. A real install cannot beat this.                                   |
 
 The attribution order is also generous to the battery. Crediting the tariff
-switch first and the battery second gives the battery its *maximum* residual
+switch first and the battery second gives the battery its _maximum_ residual
 share: on flat 8.2¢ winter Residential Service there is no spread to arbitrage
 at all, so under battery-first attribution the hardware earns close to nothing
 for eight months of the year. The favourable ordering was chosen deliberately.
