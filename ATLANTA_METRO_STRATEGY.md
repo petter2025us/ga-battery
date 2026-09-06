@@ -94,3 +94,13 @@ This is where storm exposure (§2) and affluence/homeownership (WTP proxy) overl
 ## 6. Recommendation
 
 Don't launch a landing page or spend a dollar on this until the two incentive-eligibility questions in §1 are answered — that's a phone call or a PSC filing read, not a multi-week research project, and it determines whether the entire pitch is "$60/mo, cheaper than it's ever been" or the same unclosed economics as the original analysis with a different state name on it. Once confirmed, 30004 (Milton) is the strongest first ZIP: highest-confidence income and homeownership combination, in the exact county named in two of the three storm events pulled in §2.
+
+## 7. Live landing page — Milton (30004)
+
+**Live:** https://claude.ai/code/artifact/99c53ae3-a04b-42c1-9492-61ef7b220a0d
+
+Built after a proposed version claiming "$145/mo average savings" was rejected — that number contradicted this repo's own verified economics (§1 of [README.md](README.md): battery earns $459/yr, lease costs $1,164+/yr) and had no basis beyond a generic solar-sales template. The live page instead uses the substantiated claim available today: **$0 out-of-pocket lease**, framed as backup power (not bill savings), with the Georgia Power incentive mentioned as "may qualify, confirmed on your call" — not a guaranteed number — until the two open eligibility questions in §1 are answered.
+
+Form matches the requested OTP-close flow: name, phone, average monthly bill (range select), ZIP (defaulted to 30004), consent checkbox. Same `leads` collection pattern as the Florida pages, `track: "milton-gapower-30004"`.
+
+**Still open before this should get real ad spend or AI-video traffic:** the PV-pairing and TPO-eligibility questions in §1. The page doesn't promise a dollar figure, so it's safe to run for lead capture now, but the phone close script should not quote a specific incentive amount until those are confirmed.
