@@ -68,3 +68,16 @@ Both built with the same lease offer ($60/mo, 25-yr, zero upfront) and layout, d
 | Dr. Phillips (Duke) | 32836 | https://claude.ai/code/artifact/fc245a8c-73aa-4602-8dd2-b2abca4f9c4a | Duke's own 75-home Hunter's Creek battery pilot, 10 minutes away, as credibility signal |
 
 **What this resolves empirically:** whether the SECO VPP mention measurably lifts conversion over the Duke-pilot-proximity claim — the open question flagged in this doc's "still open" section. Compare submission rate and lead quality between the two once both have run for a comparable traffic period.
+
+### Revision: simplified for cognitive load (2026-09-05)
+
+First version was correct in substance but asked too much of the visitor before they could act: a coordinate-style graphic to parse, six form fields, a fabricated testimonial, and a scroll through four sections before reaching the form. Rebuilt both pages around a single principle — one thing to understand, one thing to do:
+
+- Form moved into the hero, visible without scrolling
+- Fields cut from 6 to 3 (name, phone, ZIP) — email and address are collected on the actual call, which is a better place for them anyway
+- Removed the cone-of-uncertainty graphic and coordinate metadata block (decorative, not functional)
+- Removed the fabricated "paraphrased for illustration" testimonial — it cost more in credibility than it added in persuasion
+- Collapsed four sections into two: hero (offer + form) and a three-number trust strip
+- Consent line shortened from a paragraph to one sentence
+
+Same URLs, same database schema — this was a content/layout revision, not a new test.
