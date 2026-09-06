@@ -6,7 +6,7 @@
 
 **Scope split:**
 
-- Georgia = existing team, installer relationships, execution network. Battery-arbitrage economics didn't close ([ga-battery-economics-do-not-close](ARCHITECTURE.md), [MULTISTATE_COMPARISON.md](MULTISTATE_COMPARISON.md)), but the market and fulfillment channel stay open for a different product.
+- Georgia = existing team, installer relationships, execution network. Battery-arbitrage economics didn't close (see [README.md](README.md), [ARCHITECTURE.md](ARCHITECTURE.md)), but the market and fulfillment channel stay open for a different product.
 - Florida = market-intelligence discovery. Not committed to "battery lease." FPL had record-low outage frequency in 2025; Duke FL averages ~~64 min outage duration excluding named storms — so "Florida has unreliable power" is not a substantiable universal claim. It does have hurricane exposure, insurance pressure, an active storage ecosystem (Duke's 75+ home Hunter's Creek pilot, 2026; Tesla VPP through SECO Energy paying up to $275/Powerwall/yr), and Tesla's own lease structure proves battery-as-a-service can clear when bundled with backup + fixed-rate electricity + bill credit. FL storage runs ~$12,466 installed for 13 kWh (~~$959/kWh, EnergySage Aug 2026) — not cheap, so product and financing structure both stay open questions.
 - Product is unresolved until unit economics + WTP data pick a winner. Candidates: battery backup/resilience, generator alternative, solar+storage, energy-management subscription, storm-prep package, utility/VPP-linked storage, or another product enabled by an existing supplier relationship.
 - AI voice vendor is unresolved until Juan selects one. Build a `VoiceProvider` adapter, not vendor-specific logic.
@@ -151,7 +151,7 @@ Expected contribution margin
 CAC ceiling = max acquisition cost compatible with target payback
 ```
 
-A $60/mo offer is not validated because a customer would accept $60. Needed inputs: hardware cost, installer cost, permitting/interconnection cost, financing cost, software/monitoring cost, maintenance reserve, warranty reserve, CAC, agent comp, cancellation/default assumption, contract term, residual value, tax-credit treatment (note: §25D expired for installs after 2025-12-31; §48E survives for third-party-owned systems — this is why lease/TPO structure is the only 2026-viable path, per [BOOTSTRAP_PRESALES_PLAN.md](BOOTSTRAP_PRESALES_PLAN.md)), utility/VPP revenue if applicable, expected lifetime revenue.
+A $60/mo offer is not validated because a customer would accept $60. Needed inputs: hardware cost, installer cost, permitting/interconnection cost, financing cost, software/monitoring cost, maintenance reserve, warranty reserve, CAC, agent comp, cancellation/default assumption, contract term, residual value, tax-credit treatment (note: §25D expired for installs after 2025-12-31; §48E survives for third-party-owned systems — this is why lease/TPO structure is the only 2026-viable path), utility/VPP revenue if applicable, expected lifetime revenue.
 
 **Bootstrap cash-flow constraint:** "first lease funds the next battery" is only valid if the first customer generates enough cash, early enough, to fund the next deployment. Model this as an explicit cash-flow timing constraint, not an annual IRR.
 
@@ -262,7 +262,7 @@ These are reusable infrastructure — they don't change when the product or mark
 11. ZIP/market intelligence model (§8)
 12. Product-validation framework (§9)
 13. Installer/fulfillment handoffs (§1, Fulfillment Scheduled → Installation)
-14. Retention workflow (existing: post-signing retention section, [WEEK_1_ACTION_PLAN.md](WEEK_1_ACTION_PLAN.md))
+14. Retention workflow (post-signing customer retention playbook — signed lease through first payment)
 15. Referral system (§1 terminal stage, §10)
 16. First-10-customer operating plan (§14)
 17. Go/no-go decision gates (§6)

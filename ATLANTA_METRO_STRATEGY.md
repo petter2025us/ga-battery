@@ -1,6 +1,6 @@
 # Georgia, Deep — Atlanta Metro Strategy
 
-**Status: this is now the only active market.** Florida work ([FLORIDA_ZIP_INTELLIGENCE.md](FLORIDA_ZIP_INTELLIGENCE.md), [ORLANDO_ZIP_DRILLDOWN.md](ORLANDO_ZIP_DRILLDOWN.md), [FLORIDA_ORGANIC_TRAFFIC_COPY.md](FLORIDA_ORGANIC_TRAFFIC_COPY.md)) is deprioritized per direct instruction, not deleted — the research stands as a record of why it was set aside (weaker utility-incentive signal, no installer relationships, split/non-overlapping utility territories). Georgia has the installer relationships already in place; that execution advantage plus a newly-material utility incentive is why the focus is moving back here, deep, rather than staying spread across two states.
+**Status: this is now the only active market.** Florida research (utility-territory and ZIP-level analysis, organic traffic copy) was removed as pre-pivot documentation — it concluded a weaker/unconfirmed utility incentive and no installer relationships in-territory, which is why the focus moved here. Georgia has the installer relationships already in place; that execution advantage plus a newly-material utility incentive is why the focus is deep here rather than spread across two states.
 
 ---
 
@@ -77,7 +77,7 @@ This is where storm exposure (§2) and affluence/homeownership (WTP proxy) overl
 
 ## 4. Why Georgia over Florida, restated plainly
 
-- **Installers already in place.** Florida had zero confirmed installer relationships (flagged as an open gap in [ORLANDO_ZIP_DRILLDOWN.md](ORLANDO_ZIP_DRILLDOWN.md)); Georgia doesn't have that gap.
+- **Installers already in place.** Florida had zero confirmed installer relationships; Georgia doesn't have that gap.
 - **A real, upfront, dollar-denominated utility incentive** ($750–$1,000/kW) beats Florida's best signal (SECO's ~$275/yr trickle) by an order of magnitude in near-term cash impact — _contingent on the two open questions in §1_.
 - **The outage story is substantiable with named, dated, county-level events**, not undermined by a "we just had our best reliability year ever" press release the way both Florida utilities' own numbers undermined the FL resilience pitch.
 - **Storm-risk counties and high-income counties are the same counties** (Fulton, Forsyth) — in Florida those were often different territories requiring a tradeoff.
@@ -115,7 +115,7 @@ Could not place a phone call (no calling capability available) or access the act
 
 **PV-pairing requirement — upgraded from "unconfirmed" to "likely required," still not a legal confirmation.** Every independent source describing this program — [Georgia Power's own site](https://www.georgiapower.com/news-hub/innovation/the-essential-role-of-battery-energy-storage-systems.html), [SEPA](https://sepapower.org/knowledge/vpp-der-policy-q3-2025/), [pv-magazine USA](https://pv-magazine-usa.com/2025/07/24/georgia-power-agrees-to-give-community-solar-a-path-forward/), [Southern Alliance for Clean Energy's policy analysis](https://cleanenergy.org/news/the-good-the-bad-and-the-uncertain-in-georgia-powers-proposed-irp-settlement/), and a solar installer's own explainer ([Better Tomorrow Solar](https://www.bettertomorrowsolar.com/blog/georgia-power-vpp-pilot-program-partnership-explained/)) — describes the program identically: "pairing dispatchable battery energy storage systems with behind-the-meter solar systems." None mentions a storage-only path. Consistent enough across independent sources to treat as a real signal, not proof.
 
-**TPO/lease eligibility — still genuinely unconfirmed, no signal found either way.** No source addresses whether a third-party-owned or leased system qualifies for the utility-directed incentive. Notably, Better Tomorrow Solar's own explainer states the pilot is still pre-enrollment: *"The VPP Pilot Program is still in its early stages of development and regulatory approval, so direct consumer participation is not yet available."* This may mean the operational eligibility rules (including TPO treatment) simply haven't been published yet.
+**TPO/lease eligibility — still genuinely unconfirmed, no signal found either way.** No source addresses whether a third-party-owned or leased system qualifies for the utility-directed incentive. Notably, Better Tomorrow Solar's own explainer states the pilot is still pre-enrollment: _"The VPP Pilot Program is still in its early stages of development and regulatory approval, so direct consumer participation is not yet available."_ This may mean the operational eligibility rules (including TPO treatment) simply haven't been published yet.
 
 **Also found:** the stipulation reportedly targets a minimum of 10,000 solar+battery customers program-wide, and a since-modified size cap that critics said was originally too small to run home heating/AC during an outage (Georgia Power agreed to revisit the interconnection study fee alongside a larger aggregate size limit, per pv-magazine).
 

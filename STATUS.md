@@ -6,7 +6,7 @@
 
 ## Ground truth
 
-- **Active market:** Georgia / Atlanta metro (North Fulton / South Forsyth corridor). Florida work is deprioritized, not deleted — kept as a record of why it was set aside (weaker/unconfirmed utility incentive, no installer relationships in-territory). See [FLORIDA_ZIP_INTELLIGENCE.md](FLORIDA_ZIP_INTELLIGENCE.md), [ORLANDO_ZIP_DRILLDOWN.md](ORLANDO_ZIP_DRILLDOWN.md).
+- **Active market:** Georgia / Atlanta metro (North Fulton / South Forsyth corridor). Florida research was removed as pre-pivot documentation (it found a weaker/unconfirmed utility incentive and no installer relationships in-territory) — the Clermont and Dr. Phillips pages built during that phase remain live (see below) even though the research write-ups are gone.
 - **The original economics finding still holds:** battery-only bill-savings arbitrage does not close in Georgia — the battery earns $459/yr against a lease that costs $1,164+/yr (see [README.md](README.md)). The Georgia pivot is not a reversal of this math; it's a different pitch (backup power, not savings) plus a new incentive that changes the _lease-cost_ side of the equation, not the arbitrage side.
 - **What changed the picture:** Georgia Power's Customer-Sited Solar Plus Storage Pilot includes a utility-directed model paying **$750/kW upfront ($1,000/kW for low-to-moderate-income customers)**. Run against the lease-cost model, this could drop the break-even from ~$97/mo toward $46–59/mo — the first calculation in this project where a $60/mo lease price lands at or below cost. Full analysis: [ATLANTA_METRO_STRATEGY.md §1](ATLANTA_METRO_STRATEGY.md).
 - **This is PROVISIONAL, not confirmed.** Two questions are still open and gate any customer-facing dollar claim:
@@ -37,7 +37,7 @@ Source for all three lives in `landing-pages/` in this repo (see [TECHNICAL_OVER
 
 ## Organic path (available now, zero blockers)
 
-Ready-to-post Nextdoor/Facebook-group copy exists for the Florida pages ([FLORIDA_ORGANIC_TRAFFIC_COPY.md](FLORIDA_ORGANIC_TRAFFIC_COPY.md)) as a template. **An equivalent Georgia/Milton version has not been written yet** — this is free and requires no Facebook Ads Manager resolution, so it's the fastest path to real traffic if the Instagram question stalls.
+**No Georgia/Milton organic post copy has been written yet.** This is free and requires no Facebook Ads Manager resolution, so it's the fastest path to real traffic if the Instagram question stalls — worth writing before waiting on the ad campaign.
 
 ## Next steps, in priority order
 
@@ -49,11 +49,10 @@ Ready-to-post Nextdoor/Facebook-group copy exists for the Florida pages ([FLORID
 
 ## Document map
 
-| File                                                                                                                                                                                 | Contents                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| [ATLANTA_METRO_STRATEGY.md](ATLANTA_METRO_STRATEGY.md)                                                                                                                               | Georgia Power incentive analysis, storm-risk evidence, ZIP ranking, incentive-eligibility research |
-| [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md)                                                                                                                                       | Frontend architecture, data schema, claim-discipline rules, deployment workflow                    |
-| [README.md](README.md)                                                                                                                                                               | Original Georgia arbitrage economics model — still the technical foundation                        |
-| [OPERATING_SYSTEM.md](OPERATING_SYSTEM.md)                                                                                                                                           | Full funnel/CRM/lifecycle architecture spec (product- and geography-agnostic)                      |
-| [FLORIDA_ZIP_INTELLIGENCE.md](FLORIDA_ZIP_INTELLIGENCE.md), [ORLANDO_ZIP_DRILLDOWN.md](ORLANDO_ZIP_DRILLDOWN.md), [FLORIDA_ORGANIC_TRAFFIC_COPY.md](FLORIDA_ORGANIC_TRAFFIC_COPY.md) | Deprioritized Florida research, kept for the record                                                |
-| `landing-pages/`                                                                                                                                                                     | Canonical HTML source for all three live pages                                                     |
+| File                                                   | Contents                                                                                           |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| [ATLANTA_METRO_STRATEGY.md](ATLANTA_METRO_STRATEGY.md) | Georgia Power incentive analysis, storm-risk evidence, ZIP ranking, incentive-eligibility research |
+| [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md)         | Frontend architecture, data schema, claim-discipline rules, deployment workflow                    |
+| [README.md](README.md)                                 | Original Georgia arbitrage economics model — still the technical foundation                        |
+| [OPERATING_SYSTEM.md](OPERATING_SYSTEM.md)             | Full funnel/CRM/lifecycle architecture spec (product- and geography-agnostic)                      |
+| `landing-pages/`                                       | Canonical HTML source for all three live pages, including the archived Florida ones                |

@@ -142,26 +142,16 @@ The Milton page's "See how it works" section is wired for a video (YouTube/Vimeo
 
 ```
 ga-battery/
+├── STATUS.md                          Ground truth + next steps — read this first
 ├── README.md                          Original GA arbitrage economics (foundational, still valid)
 ├── ARCHITECTURE.md                    TOU model generalization notes
-├── MULTISTATE_COMPARISON.md           GA/CA/TX/FL arbitrage comparison (historical)
-├── SAIDI_INSURANCE_MODEL.md           Outage-cost/insurance-value model (CA-focused, historical)
-├── ORLANDO_ANALYSIS.md                OUC Orlando viability (historical, FL-specific)
-├── WTP_VALIDATION_PLAN.md             Original $8-15k survey plan (superseded by bootstrap model)
 ├── OPERATING_SYSTEM.md                Full CRM/lifecycle/funnel infrastructure spec (product-agnostic)
-├── BOOTSTRAP_PRESALES_PLAN.md         Zero-capital pre-sales model
-├── BOOTSTRAP_QUICK_START.md           One-page bootstrap reference
-├── WEEK_1_ACTION_PLAN.md              Day-by-day launch checklist (FL-originated, playbook still applies)
-├── LANDING_PAGE_COPY.md               Original FL landing-page copy source
-├── AD_COPY_VARIATIONS.md              Original FL ad copy source
-├── CARRD_SETUP_TONIGHT.md             Carrd setup notes (superseded by Artifact-based pages)
-├── FLORIDA_ZIP_INTELLIGENCE.md        FL territory research — DEPRIORITIZED
-├── ORLANDO_ZIP_DRILLDOWN.md           FL ZIP-level scoring — DEPRIORITIZED
-├── FLORIDA_ORGANIC_TRAFFIC_COPY.md    FL Nextdoor/FB copy — DEPRIORITIZED
 ├── ATLANTA_METRO_STRATEGY.md          Current active market research — GA/Atlanta
 ├── TECHNICAL_OVERVIEW.md              This file
 ├── landing-pages/
 │   ├── active/milton.html             Canonical source, live GA page
-│   └── archive-florida/*.html         Canonical source, deprioritized FL pages
+│   └── archive-florida/*.html         Canonical source, deprioritized FL pages (still live)
 └── engine/                            Python tariff/breakeven/lease models
 ```
+
+Pre-pivot Florida/PSPS-era research and copy docs (multi-state comparison, SAIDI insurance model, Orlando analysis, WTP validation plan, bootstrap pre-sales plan, Carrd/ad/landing-page copy sources, FL ZIP intelligence and drilldown, FL organic traffic copy) were removed as unrelated documentation once the Georgia/Atlanta pivot became the sole active thesis. The Florida landing pages they informed remain live — see the table in §1 — only the write-ups behind them were cleaned up. Recoverable from git history if needed.
