@@ -55,3 +55,16 @@ Where the **Tesla VPP cash incentive is actually live** (up to ~$275/Powerwall/y
 ## Recommendation
 
 Run the Week-1-style landing page + organic lead test (same bootstrap model as Georgia, [BOOTSTRAP_QUICK_START.md](BOOTSTRAP_QUICK_START.md)) simultaneously in **34711 (Clermont)** and **32836 (Dr. Phillips)** — one from each track — before committing to either. That resolves the SECO VPP question empirically (does the $275/yr credit change conversion or messaging response) rather than waiting on a phone call that may not get a clean answer.
+
+---
+
+## Live test pages (parallel A/B, launched 2026-09-05)
+
+Both built with the same lease offer ($60/mo, 25-yr, zero upfront) and layout, differing only in the track-specific claim each territory can actually substantiate — SECO's VPP credit for Clermont, Duke's own pilot as proximity social proof for Dr. Phillips. Each page writes submissions to its own artifact-scoped `leads` collection (fields: name, phone, email, address, zip, track, inZip, consent, submittedAt) — no separate CRM needed for this first read.
+
+| Track | ZIP | URL | Claim used |
+|---|---|---|---|
+| Clermont (SECO) | 34711 | https://claude.ai/code/artifact/225a6562-6d2a-4299-bc21-df223ecc14c2 | SECO Tesla VPP bill credit (up to $275/Powerwall/yr) — flagged on-page as unconfirmed for leased systems, resolved on the call |
+| Dr. Phillips (Duke) | 32836 | https://claude.ai/code/artifact/fc245a8c-73aa-4602-8dd2-b2abca4f9c4a | Duke's own 75-home Hunter's Creek battery pilot, 10 minutes away, as credibility signal |
+
+**What this resolves empirically:** whether the SECO VPP mention measurably lifts conversion over the Duke-pilot-proximity claim — the open question flagged in this doc's "still open" section. Compare submission rate and lead quality between the two once both have run for a comparable traffic period.
