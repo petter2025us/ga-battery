@@ -1,5 +1,7 @@
 # Organic Traffic Copy — Clermont & Dr. Phillips (ready to post)
 
+> **DEPRIORITIZED (2026-09-05):** Florida is no longer the active market — Georgia is, deep, per direct instruction. Kept as a record of the research and why it was set aside (weaker/unconfirmed utility incentive, no installer relationships in-territory). See [ATLANTA_METRO_STRATEGY.md](ATLANTA_METRO_STRATEGY.md) for the current focus.
+
 **Why I'm not posting this myself:** Nextdoor requires a verified resident address tied to a real person — I have no legitimate way to hold that. Facebook groups need your logged-in account and, for most local groups, admin approval that's tied to your identity as a member of that community. Posting through either would mean impersonating you or fabricating a resident identity, which I won't do. What follows is ready to paste — this should take you under 2 minutes per post.
 
 **Cost: $0.** Everything below is organic (no ad spend), per the standing constraint that Facebook/paid ads are deferred until this converts.

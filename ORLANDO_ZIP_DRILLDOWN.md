@@ -1,5 +1,7 @@
 # Orlando Metro ZIP Drilldown — Pass 2
 
+> **DEPRIORITIZED (2026-09-05):** Florida is no longer the active market — Georgia is, deep, per direct instruction. Kept as a record of the research and why it was set aside (weaker/unconfirmed utility incentive, no installer relationships in-territory). See [ATLANTA_METRO_STRATEGY.md](ATLANTA_METRO_STRATEGY.md) for the current focus.
+
 **Correction to [FLORIDA_ZIP_INTELLIGENCE.md](FLORIDA_ZIP_INTELLIGENCE.md):** that doc's #1 ranking treated "Orlando metro (SECO + Duke FL)" as one territory. It isn't. **SECO Energy's service area is Citrus, Hernando, Lake, Levy, Marion, Pasco, and Sumter counties** ([SECO service territory](https://secoenergy.com/service-territory)) — rural/exurban Central Florida northwest of Orlando. **Duke Energy Florida's Orlando-area territory is Orange County and inner suburbs**, including Hunter's Creek (32837), where the utility's own battery pilot runs. These do not overlap. The Tesla VPP cash incentive (SECO) and the Duke demand-response pilot are two separate opportunities in two separate places, not one combined signal. Splitting them below.
 
 ---

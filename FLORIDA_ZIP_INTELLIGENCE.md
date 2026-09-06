@@ -1,5 +1,7 @@
 # Florida ZIP/Market Intelligence — Pass 1
 
+> **DEPRIORITIZED (2026-09-05):** Florida is no longer the active market — Georgia is, deep, per direct instruction. Kept as a record of the research and why it was set aside (weaker/unconfirmed utility incentive, no installer relationships in-territory). See [ATLANTA_METRO_STRATEGY.md](ATLANTA_METRO_STRATEGY.md) for the current focus.
+
 **Purpose:** Score Florida utility territories/counties against the variable set in [OPERATING_SYSTEM.md §8](OPERATING_SYSTEM.md), before ZIP selection. This is a first pass on public data — not yet ZIP-granular. It narrows the field from "all of Florida" to 3-4 candidate territories worth ZIP-level drilldown.
 
 **Status:** Directional. Several rows are marked `DATA GAP` — the number needs a PSC filing pull, Census ACS query, or installer-API check that a web search can't resolve. Do not treat this as final scoring; treat it as the shortlist that earns the next research pass.
