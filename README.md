@@ -1,6 +1,6 @@
 # Georgia residential battery — economics before spend
 
-> **Current status:** active market is Georgia/Atlanta metro. See [ATLANTA_METRO_STRATEGY.md](ATLANTA_METRO_STRATEGY.md) for the live thesis, ZIP targeting, and the Georgia Power incentive that changes the math below — and [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md) for the live landing page, data schema, and the claim-discipline rules that govern all marketing/sales copy. Florida research is deprioritized, not deleted (see [FLORIDA_ZIP_INTELLIGENCE.md](FLORIDA_ZIP_INTELLIGENCE.md)).
+> **Start here: [STATUS.md](STATUS.md)** — ground truth on where this project stands and the prioritized next steps. This README is the technical foundation (the economics model below); STATUS.md is the current state of the business.
 
 A deterministic model of whether a Georgia Power residential battery lease can
 be sold on bill savings. Built before any ad spend, because it answers the
