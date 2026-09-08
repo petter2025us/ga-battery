@@ -145,7 +145,7 @@ FPL_FLORIDA_TOU_PLACEHOLDER = UtilitySchedule(
 
 SCHEDULES = {
     "georgia_power": GEORGIA_POWER_OA,
-    "ouc_orlando": OUC_ORLANDO_SHIFT_SAVE,
+    "ouc_orlando": OUC_ORLANDO_TOU_PLACEHOLDER,
     "duke_florida": DUKE_FLORIDA_TOU_PLACEHOLDER,
     "fpl_florida": FPL_FLORIDA_TOU_PLACEHOLDER,
 }
@@ -194,45 +194,100 @@ def monthly_kwh_profile(annual_avg_kwh: float, a: Assumptions) -> dict[int, floa
     }
 
 
-def bill_baseline(
+class MonthlyBill(NamedTuple):
+    bill: float
+    kwh: float
+
+
+# Georgia Power Residential Service (Schedule R) base energy rates, cents/kWh.
+# Winter is flat; summer is tiered. The per-kWh RATES below are sourced from
+# the same 2026-09-05 pass as TOU-OA-14 (see README "What is verified vs.
+# assumed"). The summer TIER BREAKPOINTS (kWh thresholds) are NOT in this
+# repo and have not been pulled from the filed Schedule R tariff -- so this
+# function approximates the summer bill using the middle published tier rate
+# (14.6c) as a flat rate, rather than guessing at breakpoints. This makes
+# `annual_bill_baseline` / `kwh_for_target_bill` (and therefore the
+# "gross annual benefit" and "free switch" figures that depend on the
+# Residential Service baseline) directional, not tariff-verified.
+#
+# The battery-only benefit (switch_only - with_battery, see breakeven.py)
+# does NOT depend on this function at all -- it nets out of the baseline
+# entirely -- so that number (the project's central finding) is unaffected
+# by this approximation.
+RESIDENTIAL_SERVICE_WINTER_RATE = 0.082
+RESIDENTIAL_SERVICE_SUMMER_RATE_APPROX = 0.146  # middle of 8.8c/14.6c/15.1c; unverified breakpoints
+
+
+def residential_service_month(
     kwh: float,
     month: int,
-    schedule: UtilitySchedule,
     a: Assumptions,
+    schedule: UtilitySchedule | None = None,
 ) -> float:
-    """Bill on the baseline (non-TOU) plan.
+    """Monthly bill on Georgia Power Residential Service (flat/tiered baseline).
 
-    For now, this returns a stub. Real implementation needs to
-    know the utility's flat-rate plan and apply tiered rates if applicable.
-
-    For Georgia Power Residential Service (tiered), this would be:
-      8.2¢ winter, 8.8¢/14.6¢/15.1¢ summer tiers.
+    See module-level note above `RESIDENTIAL_SERVICE_SUMMER_RATE_APPROX`:
+    the summer figure is an unverified approximation, not a tiered calc.
     """
-    # Stub: return kwh * average rate
-    return 0.0
+    if schedule is None:
+        schedule = GEORGIA_POWER_OA  # only used for basic_service_per_day/riders/franchise_fee
+
+    is_summer = month in (6, 7, 8, 9)
+    rate = RESIDENTIAL_SERVICE_SUMMER_RATE_APPROX if is_summer else RESIDENTIAL_SERVICE_WINTER_RATE
+
+    energy = kwh * rate
+    riders = kwh * schedule.riders_per_kwh
+    basic = schedule.basic_service_per_day * a.days_per_month
+    return (energy + riders + basic) * (1 + schedule.franchise_fee)
 
 
-def bill_on_schedule(
+def overnight_advantage_month(
     kwh: float,
     month: int,
-    schedule: UtilitySchedule,
-    shape: LoadShape | None = None,
-    battery: Battery | None = None,
-    a: Assumptions | None = None,
-) -> float:
-    """Bill on a given TOU rate schedule.
+    shape: LoadShape,
+    a: Assumptions,
+    battery: Battery | None,
+    schedule: UtilitySchedule | None = None,
+) -> MonthlyBill:
+    """Monthly bill on Georgia Power Overnight Advantage (TOU-OA-14).
 
-    If battery is None, compute bill on TOU without storage.
-    If battery is provided, optimize dispatch (charge off-peak, discharge peak).
+    If `battery` is None: bill for the plan switch alone, no hardware.
+    If `battery` is given: dispatch is "perfect" -- charges every night in
+    the super off-peak window, discharges into whichever window would
+    otherwise be most expensive that day (on-peak on summer weekdays,
+    off-peak every other day). This is the dispatch the README documents
+    ("Charges every night, discharges peak-first") and the exact split
+    (peak weekdays vs. shoulder days) behind the README's hand cross-check.
     """
-    if a is None:
-        a = Assumptions()
+    if schedule is None:
+        schedule = GEORGIA_POWER_OA
 
-    if shape is None:
-        shape = LoadShape()
+    on_rate = schedule.rate_for("on_peak")
+    off_rate = schedule.rate_for("off_peak")
+    sop_rate = schedule.rate_for("super_off_peak")
 
-    # Stub: needs implementation of load distribution and dispatch logic.
-    return 0.0
+    is_summer = month in (6, 7, 8, 9)
+    on_kwh = kwh * shape.peak_share if is_summer else 0.0
+    sop_kwh = kwh * shape.super_off_peak_share
+    off_kwh = kwh - on_kwh - sop_kwh
+
+    if battery is not None:
+        peak_days = a.weekdays_per_summer_month if is_summer else 0
+        other_days = a.days_per_month - peak_days
+        displaced_on = battery.usable_kwh * peak_days
+        displaced_off = battery.usable_kwh * other_days
+        charge_kwh = battery.usable_kwh * a.days_per_month / battery.round_trip_efficiency
+
+        on_kwh = max(on_kwh - displaced_on, 0.0)
+        off_kwh = max(off_kwh - displaced_off, 0.0)
+        sop_kwh = sop_kwh + charge_kwh
+
+    energy = on_kwh * on_rate + off_kwh * off_rate + sop_kwh * sop_rate
+    total_kwh = on_kwh + off_kwh + sop_kwh
+    riders = total_kwh * schedule.riders_per_kwh
+    basic = schedule.basic_service_per_day * a.days_per_month
+    bill = (energy + riders + basic) * (1 + schedule.franchise_fee)
+    return MonthlyBill(bill=bill, kwh=total_kwh)
 
 
 def utility_schedule(name: str) -> UtilitySchedule:

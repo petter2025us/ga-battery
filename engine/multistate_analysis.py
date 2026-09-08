@@ -6,7 +6,8 @@ which state(s) can support a lease-based business model.
 Run: python -m engine.multistate_analysis
 """
 
-from .breakeven import breakeven_lease, amortized_monthly
+from .breakeven import breakeven_lease
+from .lease import amortized_monthly
 from .tariff import Assumptions, Battery, LoadShape
 from .rates import ALL_SCHEDULES
 
