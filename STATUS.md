@@ -1,6 +1,40 @@
 # Status & Next Steps
 
-**Last updated:** 2026-09-06. **Read this first** — it's the single ground-truth doc for where this project actually stands. Everything else in this repo is supporting detail, cited below.
+**Last updated:** 2026-09-08. **Read this first** — it's the single ground-truth doc for where this project actually stands. Everything else in this repo is supporting detail, cited below.
+
+---
+
+## 2026-09-08 — engine was broken; core finding re-verified, fixed now
+
+A comprehensive review found that `python -m engine.breakeven` and
+`python -m engine.lease` — the two commands README.md tells you to run to
+see this project's economics — **had never actually run successfully in
+this repo's history.** Three separate import bugs (details in
+[ARCHITECTURE.md](ARCHITECTURE.md#repo-integrity-history-2026-09-08-finding))
+meant every "the engine returns $459" claim in this repo was, until today,
+unverified — the number was hand-derived and carried over from an earlier
+version of the model, not machine-checked.
+
+**The good news:** now that it's fixed and actually runs, the core,
+decision-driving finding holds exactly — **$459/yr ceiling, $26–38/month,
+$106+/month honest lease floor, $67–156/month gap.** These numbers do not
+depend on the one piece of tariff data this repo doesn't have precisely (see
+below), and independently re-deriving them from the underlying tariff rates
+reproduced the hand cross-check exactly. **The original conclusion — bill
+savings alone don't close — is not weakened by this bug being found; if
+anything it's now on firmer ground than before, because it's the first time
+it's been checked by running code instead of trusting a claim.**
+
+**What's now flagged as approximate, not verified:** the "gross annual
+benefit" and "free switch" numbers (and the two worked dollar examples in
+README's Finding #2/#3) depend on Georgia Power's Residential Service tier
+*breakpoints*, which are not in this repo and could not be fetched in this
+session (no general web access, GitHub-only). The model now uses a documented
+flat-rate approximation instead of guessing at breakpoints. Do not quote
+"$461/year" or "$143/yr gained, $134/yr lost" specifically — those examples
+no longer reproduce. The **existing claim-discipline rule already covers
+this** (no bill-savings numbers on any customer-facing page) — this finding
+is a reason to keep that rule, not a new one.
 
 ---
 
